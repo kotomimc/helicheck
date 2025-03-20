@@ -1,0 +1,207 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+// Color
+///////////////////////////////////////////////////////////////////////
+$primary: #FFCC00;
+$secondary: #F2F2F7;
+$dark: $black;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "dark": $dark
+);
+
+
+// Font
+///////////////////////////////////////////////////////////////////////
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+$font-family-base: 'Montserrat', sans-serif;
+$headings-font-family: 'Montserrat', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$headings-font-weight: 600;
+$headings-color: $black;
+
+$line-height-base: 1.675;
+$line-height-sm: 1.4;
+
+$h1-font-size: 5rem; // 80px
+$h2-font-size: 3.3125rem; // 53px
+$h3-font-size: 1.25rem; // 20px
+$h4-font-size: 1.75rem; // 28px
+
+$font-size-base: 1.1875rem; // 19px
+
+$font-sizes: (
+  5: .95rem,
+  6: .8rem
+);
+
+
+// Button
+///////////////////////////////////////////////////////////////////////
+$btn-font-size: 1.5rem;
+$btn-padding-y: 0.9rem;
+$btn-padding-x: 3rem;
+
+
+// Breakpoints
+///////////////////////////////////////////////////////////////////////
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1410px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1408px
+);
+
+
+// Spacing
+///////////////////////////////////////////////////////////////////////
+$spacer: 16px;
+
+$spacers: (
+  0: 0,
+  1: $spacer, // 16px
+  2: $spacer * 2, // 32px
+  3: $spacer * 3, // 48px
+  4: $spacer * 4, // 64px
+  5: $spacer * 5, // 80px
+);
+
+$headings-margin-bottom: $spacer * 1.25;
+
+$navbar-padding-y: $spacer * 1.125;
+$navbar-nav-link-padding-x: 1.5rem;
+$nav-link-font-weight: 600;
+$navbar-light-color: $white;
+$navbar-light-hover-color: $yellow-200;
+
+
+// Card
+///////////////////////////////////////////////////////////////////////
+
+$card-spacer-y: $spacer * 1.875;
+$card-spacer-x: $spacer * 1.875;
+$card-border-radius: 0;
+
+
+///////////////////////////////////////////////////////////////////////
+// Import the rest of Bootstrap after defining custom variables
+@import 'bootstrap/scss/bootstrap';
+///////////////////////////////////////////////////////////////////////
+
+// Typography
+///////////////////////////////////////////////////////////////////////
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.125;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+h4 {
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+
+// Button
+///////////////////////////////////////////////////////////////////////
+.btn {
+    border-radius: 36px;
+    transition: all 0.3s ease-in-out;
+    border-width: 3px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    color: $black !important; 
+    background-color: transparent !important;
+    border-color: $black !important; 
+
+    &:before {
+        background-color: $primary;
+    }
+    
+    &:hover {
+        color: $black !important;        
+    }
+}
+
+.btn-outline-light {
+    color: $white !important; 
+    border-color: $white !important;  
+
+    &:before {
+        background-color: $primary;
+    }
+
+    &:hover {
+        color: $black !important;
+        border-color: $black !important;
+    }
+}
+
+.btn-outline-primary {
+    color: $black !important;
+    border-color: transparent !important;
+    border-color: $black !important;
+
+    &:before {
+        background-color: $black;
+    }
+
+    &:hover {
+        color: $white !important;
+    }
+}
+
+.btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: top 0.1s ease-in-out;
+}
+.btn-animated:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: -1;
+  }  
+  .btn-animated:hover:before {
+    top: 0;
+  }
+
+
+// Arrow List Icon
+///////////////////////////////////////////////////////////////////////
+.icon-circle {
+    width: 1.35em; 
+    height: 1.35em; 
+    background-color: $primary;
+    color: $black; 
+    border-radius: 50%; 
+    font-size: 18px;
+    padding-top: 2px;
+}
+
+
+@import 'custom';

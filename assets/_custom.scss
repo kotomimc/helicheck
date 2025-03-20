@@ -1,0 +1,217 @@
+// Header
+.logo {
+    height: 56px;
+    width: auto; 
+    fill: $white;
+}
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out;
+}
+.fixed-top {
+    position: fixed !important;
+}
+.navbar.scrolled {
+    background-color: $dark !important;
+
+    .logo {        
+        fill: $primary;
+    }
+
+    .nav-link {
+        color: $primary;
+
+        &:hover {
+            color: $white !important;
+        }
+    }
+}
+button.navbar-toggler {
+
+    .navbar-toggler-icon {
+        filter: invert(1);
+    }
+
+    &:hover {
+        .navbar-toggler-icon {
+            filter: none;
+        } 
+    }
+}
+
+//Hero
+.hero {
+    position: relative;
+    padding-top: 385px !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../img/hero.jpg') no-repeat center center;
+    background-size: cover;
+
+    h1, p {
+        color: $white;
+    }
+}
+
+// Key Services
+.services {
+
+    transition: background 0.5s ease-in-out;
+
+    @include media-breakpoint-up(xl) {
+
+        padding-top: 395px !important;
+    }
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/services_01.jpg) no-repeat center center;
+    background-size: cover;
+    
+    &.service01 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_01.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    
+    &.service02 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_02.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    
+    &.service03 {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_03.jpg') no-repeat center center;
+        background-size: cover;
+    }
+    
+
+    .d-flex {
+        height: 100%;
+    } 
+    .card {
+        flex: 1; 
+        display: flex;
+        flex-direction: column; 
+        height: 100%; 
+    }
+    .card-body{
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column; 
+    }
+    .extra-content {
+        flex-grow: 1;
+        transform: translateY(20px);
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+    .card:hover .extra-content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// Where We Operate
+.operate {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/operate_bg.jpg) no-repeat center center;
+}
+.countries > div {
+
+    @include media-breakpoint-up(xl) {
+
+        height: 488px;
+        width: 100%;
+    }
+    @include media-breakpoint-down(xl) {
+
+        height: 300px;
+        width: 30%;
+    }
+    background-size: cover !important;
+    
+    &.operate_01 {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('../img/operate_01.jpg') no-repeat center center;
+    }
+    &.operate_02 {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('../img/operate_02.jpg') no-repeat center center;
+    }
+    &.operate_03 {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('../img/operate_03.jpg') no-repeat center center;
+    }
+    &.operate_04 {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('../img/operate_04.jpg') no-repeat center center;
+    }
+    &.operate_05 {
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                    url('../img/operate_05.jpg') no-repeat center center;
+    }
+}
+
+// Meet Our Experts
+.d-flex.experts > div {
+    flex: 1; 
+
+    @include media-breakpoint-down(lg) {
+
+        text-align: center;
+    }
+}
+
+// Why HeliCheck
+.whyhelicheck {
+
+    .two-column {
+        width: 100vw;
+    }
+    
+    .left-image {
+        flex: 1;
+        background: url('../img/whyhelicheck.jpg') no-repeat bottom center;
+        background-size: cover; 
+        min-height: 300px; 
+    }
+    .right-text {
+        flex: 1;
+
+        h3 {
+            font-size: 53px;
+            text-transform: inherit; 
+        }        
+        .fa-ul {
+            margin-left: 32px;
+        }
+    }
+}
+
+// Footer
+footer {
+
+   .logo {
+        fill: $primary;
+    }
+    .nav .nav-link:hover {
+        color: $primary !important;
+    }
+
+   .nav .nav-item.fs-6 {
+        padding: .875em;
+    }
+    @include media-breakpoint-down(md) {
+
+        .utility_nav {
+
+            .nav {
+                justify-content: center;
+
+                .text-white {
+
+                    width: 100%;
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+            }            
+        }        
+    }
+}
