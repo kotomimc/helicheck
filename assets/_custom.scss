@@ -65,23 +65,7 @@ button.navbar-toggler {
     }
     
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/services_01.jpg) no-repeat center center;
-    background-size: cover;
-    
-    &.service01 {
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_01.jpg') no-repeat center center;
-        background-size: cover;
-    }
-    
-    &.service02 {
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_02.jpg') no-repeat center center;
-        background-size: cover;
-    }
-    
-    &.service03 {
-        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/services_03.jpg') no-repeat center center;
-        background-size: cover;
-    }
-    
+    background-size: cover;    
 
     .d-flex {
         height: 100%;
